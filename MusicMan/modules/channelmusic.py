@@ -367,7 +367,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "helper"
+        user.first_name = "Zeed-Music"
     usar = user
     wew = usar.id
     try:
@@ -538,10 +538,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Channel", url="https://t.me/Rezy_IsBack"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="Instagram", url="https://www.instagram.com/ridhoalfahrezi._")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -604,7 +604,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "Zeed-Music"
     usar = user
     wew = usar.id
     try:
@@ -653,7 +653,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query=queryy
     res = lel
-    await res.edit(f'Searching 👀👀👀 for `{query}` on deezer')
+    await res.edit(f'Searching for `{query}` on deezer')
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
@@ -670,10 +670,10 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Channel", url="https://t.me/Rezy_IsBack"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="Instagram", url="https://www.instagram.com/ridhoalfahrezi._")],
             ]
         )
     file_path = await convert(wget.download(url))
@@ -733,7 +733,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "Zeed-Music"
     usar = user
     wew = usar.id
     try:
@@ -766,7 +766,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add @Zeed1_Assistance to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -781,7 +781,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{query}` on jio saavn")
+    await res.edit(f"Searching for `{query}` on jio saavn")
     try:
         songs = await arq.saavn(query)
         if not songs.ok:
@@ -799,10 +799,10 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Channel", url="https://t.me/Rezy_IsBack"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="Instagram", url="https://www.instagram.com/ridhoalfahrezi._")],
             ]
         )
     file_path = await convert(wget.download(slink))
