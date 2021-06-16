@@ -155,12 +155,12 @@ async def start(client: Client, message: Message):
 )
 async def help(client: Client, message: Message):
     await message.reply_text(
-        """**Klik Tombol dibawah untuk Melihat Cara Menggunakan Bot**""",
+        """**Tekan Tombol dibawah untuk Melihat Cara Menggunakan Bot**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Channel Panduan", url="https://t.me/ZeedGoodBoys/18"
+                        "Channel Panduan", url="https://t.me/ZeedGoodBoys/20"
                     )
                 ]
             ]
