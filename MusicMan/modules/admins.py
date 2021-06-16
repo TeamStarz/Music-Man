@@ -40,7 +40,7 @@ async def update_admin(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ Admin cache refreshed!")
+    await message.reply_text("Admin Cache Refreshed!")
 
 
 @Client.on_message(command("pause") & other_filters)
@@ -51,7 +51,7 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("❗ **Tidak ada Lagu yang sedang diputar!**")
+        await message.reply_text("❗ **Tidak Ada Lagu Yang Sedang Di Putar!**")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
         await message.reply_text("▶️ **Paused!**")
@@ -65,7 +65,7 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ **Tidak ada Lagu yang sedang dijeda!**")
+        await message.reply_text("❗ **Tidak Ada Lagu Yang Sedang Di Jeda!**")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
         await message.reply_text("⏸ **Resumed!**")
@@ -95,7 +95,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ **Tidak ada Lagu Selanjutnya untuk dilewati!**")
+        await message.reply_text("❗ **Tidak Ada Lagu Selanjutnya Untuk Di Lewati!**")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -106,7 +106,7 @@ async def skip(_, message: Message):
                 chat_id, callsmusic.queues.get(chat_id)["file"]
             )
 
-        await message.reply_text("⏩ **Melewati lagu saat ini!**")
+        await message.reply_text("⏩ **Melewati Lagu Saat Ini!**")
 
 
 @Client.on_message(filters.command("admincache"))
@@ -122,4 +122,4 @@ async def admincache(client, message: Message):
         ),
     )
 
-    await message.reply_text("✅️ **Daftar admin** telah **diperbarui**")
+    await message.reply_text("Daftar Admin Telah Di Refresh!")
