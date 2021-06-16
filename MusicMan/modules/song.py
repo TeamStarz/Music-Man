@@ -65,16 +65,16 @@ def song(client, message):
         results[0]["views"]
 
     except Exception as e:
-        m.edit("❌ Lagu Tidak ditemukan.\n\nCoba Masukan Judul lagu yang lebih jelas.")
+        m.edit("❌ Lagu Tidak Ditemukan.\n\nCoba Masukan Judul Lagu Yang Lebih Jelas.!")
         print(str(e))
         return
-    m.edit("⬇️ **Sedang Mendownload Lagu**")
+    m.edit("⏳ **Sedang Mendownload Lagu**")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = "**🎵 Uploaded by @Lunatic0de**"
+        rep = "**🎶 Uploaded by [Rezy](https://t.me/Reeeeeezy)**"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -261,11 +261,11 @@ def time_to_seconds(time):
 async def jssong(_, message):
     global is_downloading
     if len(message.command) < 2:
-        await message.reply_text("/saavn masukan judul lagu.")
+        await message.reply_text("/saavn Masukan Judul Lagu.")
         return
     if is_downloading:
         await message.reply_text(
-            "Downloadan yang lain sedang berlangsung, coba lagi nanti"
+            "Zeed Sedang Mengunduh Lagu, Silahkan Coba Lagi Nanti"
         )
         return
     is_downloading = True
@@ -300,11 +300,11 @@ async def jssong(_, message):
 async def deezsong(_, message):
     global is_downloading
     if len(message.command) < 2:
-        await message.reply_text("/deezer masukan judul lagu")
+        await message.reply_text("/deezer Masukan Judul Lagu")
         return
     if is_downloading:
         await message.reply_text(
-            "Downloadan yang lain sedang berlangsung, coba lagi nanti"
+            "Zeed Sedang Mengunduh Lagu, Silahkan Coba Lagi Nanti"
         )
         return
     is_downloading = True
@@ -337,7 +337,7 @@ async def ytmusic(client, message: Message):
     global is_downloading
     if is_downloading:
         await message.reply_text(
-            "Downloadan yang lain sedang berlangsung, coba lagi nanti"
+            "Zeed Sedang Mengunduh Lagu, Silahkan Coba Lagi Nanti"
         )
         return
 
@@ -381,7 +381,7 @@ async def ytmusic(client, message: Message):
 
             if duration > DURATION_LIMIT:
                 await pablo.edit(
-                    f"❌ Video berdurasi lebih dari {DURATION_LIMIT} minute(s) tidak diperbolehkan, video yang ingin kamu download {duration} minute(s)"
+                    f"❌ Video Berdurasi Lebih Dari {DURATION_LIMIT} Minute(s) Tidak Diperbolehkan.!, Video Yang Ingin Anda Download Adalah {duration} Minute(s)"
                 )
                 is_downloading = False
                 return
