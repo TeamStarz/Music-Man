@@ -27,11 +27,12 @@ logging.basicConfig(level=logging.INFO)
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
+    await message.reply_sticker("CAACAgIAAxkBAAEKL_1gt842-B5SnR5eHrlBsfTviEt2GwACrAsAAt_YUUnNC_qAE0qWKR8E")
     await message.reply_text(
         f"""<b>Hallo {message.from_user.first_name} Aku adalah {PROJECT_NAME}\n
 __Aku Adalah Bot Music Group, Yang Dirancang Untuh Mengunduh Maupun Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.__
 ┈──────────────────────┈
-➠ Invite [Assistance](Zeed1_Assistance) Masuk ke Dalam Grup Anda
+➠ Invite __[Assistance](Zeed1_Assistance)__ Masuk ke Dalam Grup Anda
 ➠ Untuk Info, Update, dan Panduan Selengkapnya Tekan Tombol Channel di Bawah, Terima kasih! Have Fun!!
 ┈──────────────────────┈
 Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap Zeed Music.
