@@ -20,22 +20,22 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Selamat datang kembali di {PROJECT_NAME}
+**Hallo 👋 Selamat Datang Kembali Di {PROJECT_NAME}
 
-✣️ {PROJECT_NAME} dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.
+➠ {PROJECT_NAME} Dapat Memutar Lagu Di Voice Chat Group Dengan Cara Yang Mudah.
 
-✣️ Assistant Music » @{ASSISTANT_NAME}\n\nKlik Next untuk instruksi**
+➠ Assistant Music » @{ASSISTANT_NAME}\n\nKlik Next Untuk Instruksi**
 
 """,
 
 f"""
 **Pengaturan**
 
-1. Jadikan bot sebagai admin
-2. Mulai obrolan suara / VCG
-3. Ketik `/userbotjoin` dan coba /play <nama lagu>
-× Jika Assistant Bot bergabung selamat menikmati musik, 
-× Jika Assistant Bot tidak bergabung Silahkan Tambahkan @{ASSISTANT_NAME} ke grup Anda dan coba lagi
+1. Jadikan Bot Sebagai Admin
+2. Mulai Obrolan Suara / VCG
+3. Ketik `/userbotjoin` Dan Coba /play <Nama Lagu>
+× Jika Assistant Bot Bergabung, Selamat Menikmati Lagu/Music, 
+× Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @{ASSISTANT_NAME} Ke Grup Anda Dan Coba Lagi.
 
 
 **» Perintah Untuk dalam grup Member Juga Bisa :**
