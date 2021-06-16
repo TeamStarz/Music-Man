@@ -28,19 +28,14 @@ logging.basicConfig(level=logging.INFO)
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>┗┓ Haii {message.from_user.first_name} saya adalah {PROJECT_NAME} ┏┛\n
-Saya Bot Music Group, Yang dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah
-Saya Memiliki Banyak Fitur Praktis Seperti :
-┏━━━━━━━━━━━━━━
-┣• Memutar Musik.
-┣• Mendownload Lagu.
-┣• Mencari Lagu Yang ingin di Putar atau di Download.
-┣• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap saya
-┗━━━━━━━━━━━━━━
-❃ Managed With ❤ By {OWNER}
-❃ Thanks To [Risman](https://t.me/mrismanaziz)
-━━━━━━━━━━━━━━━
-Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
+        f"""<b>Hallo {message.from_user.first_name} Aku adalah {PROJECT_NAME}\n
+__Aku Adalah Bot Music Group, Yang Dirancang Untuh Mengunduh Maupun Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.__
+┈──────────────────────┈
+➠ Invite [Assistance](Zeed1_Assistance) Masuk ke Dalam Grup Anda
+➠ Untuk Info, Update, dan Panduan Selengkapnya Tekan Tombol Channel di Bawah, Terima kasih! Have Fun!!
+┈──────────────────────┈
+Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap Zeed Music.
+➥ Developed by : {OWNER} 
 </b>""",
 
 # Edit Yang Perlu Lu ganti 
@@ -53,12 +48,12 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "💬 Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "Channel Panduan", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "⛑ Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "Group Music", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                        "Instagram", url=f"https://www.instagram.com/{SOURCE_CODE}")
                 ]
             ]
         ),
@@ -105,16 +100,16 @@ def map(pos):
             ],
             [
                 InlineKeyboardButton(
-                    text='💬 Channel Updates',
+                    text='Channel Panduan',
                     url=f"https://t.me/{UPDATES_CHANNEL}",
                 ),
                 InlineKeyboardButton(
-                    text='⛑ Group Support', url=f"https://t.me/{SUPPORT_GROUP}"
+                    text='Group Music', url=f"https://t.me/{SUPPORT_GROUP}"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text='🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}"
+                    text='Instagram', url=f"https://www.instagram.com/{SOURCE_CODE}"
                 )
             ],
             [InlineKeyboardButton(text='«', callback_data=f"help+{pos-1}")],
@@ -136,12 +131,12 @@ def map(pos):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ **Apakah Anda ingin mencari Link YouTube?**",
+        "**Apakah Anda Ingin Mencari Link YouTube?**",
         reply_markup=InlineKeyboardMarkup(
             [   
                 [    
                     InlineKeyboardButton(
-                        "✅ Ya", switch_inline_query_current_chat=""
+                        "❗ Ya", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
                         "❌ Tidak ", callback_data="close"
@@ -164,7 +159,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/Lunatic0de/20"
+                        "Channel Panduan", url="https://t.me/ZeedGoodBoys/18"
                     )
                 ]
             ]
@@ -178,15 +173,15 @@ async def help(client: Client, message: Message):
     & ~ filters.edited
 )
 async def reload(client: Client, message: Message):
-    await message.reply_text("""✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**""",
+    await message.reply_text("""Bot `Berhasil Dimulai Ulang!`\n\n• **Daftar admin** telah **diperbarui**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "Group Music", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "Owner", url=f"https://t.me/mrismanaziz"
+                        "Instagram 🇲🇨", url=f"https://www.instagram.com/ridhoalfahrezi._"
                     )
                 ]
             ]
