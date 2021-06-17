@@ -719,7 +719,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Sedang Memproses Lagu**")
+    lel = await message.reply("⏳ **Sedang Memproses Lagu**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -737,21 +737,21 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        f"<b>Ingatlah untuk menambahkan {user.first_name} ke Channel Anda</b>",
+                        f"<b>Ingatlah Untuk Menambahkan {user.first_name} Ke Channel Anda</b>",
                     )
                     pass
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Tambahkan saya sebagai admin grup Anda terlebih dahulu</b>",
+                        "<b>Tambahkan Zeed Music Sebagai Admin Grup Anda Terlebih Dahulu.!</b>",
                     )
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await lel.edit(
-                        f"<b>{user.first_name} berhasil bergabung dengan Group anda</b>",
+                        f"<b>{user.first_name} Berhasil Bergabung Dengan Group Anda</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -759,15 +759,15 @@ async def ytplay(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>❗ Flood Wait Error ❓\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-                        f"\n\nAtau tambahkan @{ASSISTANT_NAME} secara manual ke Grup Anda dan coba lagi</b>",
+                        f"<b>❗ Flood Wait Error ❓\n{user.first_name} Tidak Dapat Bergabung Dengan Grup Anda Karena Banyaknya Permintaan Bergabung Untuk Userbot! Pastikan Pengguna Tidak Dibanned Dalam Grup."
+                        f"\n\nAtau Tambahkan @{ASSISTANT_NAME} Secara Manual Ke Grup Anda dan Silahkan Coba Lagi</b>",
                     )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
+            f"<i>{user.first_name} Terkena Banned Dari Grup Ini, Minta Admin Untuk Mengirim Perintah `/play` Untuk Pertama Kalinya Atau Tambahkan @{ASSISTANT_NAME} Secara Manual.!</i>"
         )
         return
     await lel.edit("🔎 **Sedang Mencari Lagu**")
@@ -779,7 +779,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 **Sedang Memproses Lagu**")
+    await lel.edit("🎶 **Sedang Memproses Lagu**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -796,7 +796,7 @@ async def ytplay(_, message: Message):
 
     except Exception as e:
         await lel.edit(
-            "**Lagu tidak ditemukan.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
+            "**Lagu Tidak Ditemukan.** Coba Cari Dengan Judul Lagu Yang Lebih Jelas, Ketik `/help` Bila Anda Butuh Bantuan"
         )
         print(str(e))
         return
