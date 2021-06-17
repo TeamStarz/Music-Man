@@ -32,7 +32,7 @@ async def pmPermit(client: USER, message: Message):
             return
         await USER.send_message(
             message.chat.id,
-            f"Halo, Aku Adalah **Layanan Asistant {PROJECT_NAME}.**\n\n ❗️ **Rules:**\n   - Jangan Spam Pesan Disini\n   - Jangan Spam Lagu Agar Tidak Delay Ataupun Error\n   - Tutorial Cara Menggunakan Bot » [Tekan Disini](https://t.me/ZeedGoodBoys/20) « \n\n 👉 **KIRIM LINK INVITE ATAU USERNAME GRUP ANDA, JIKA ASSISTANT TIDAK DAPAT BERGABUNG DENGAN GRUP ANDA.**\n\n [Instagram :](https://www.instagram.com/ridhoalfahrezi._) @ridhoalfahrezi._ - [Developed by :](https://t.me/Rezy_IsBack) {OWNER}\n\n",
+            f"Halo, Aku Adalah **Layanan Asistant {PROJECT_NAME}.**\n\n ❗️ **Rules:**\n   - Jangan Spam Pesan Disini\n   - Jangan Spam Lagu Dalam Satu Waktu\n\n 👉 **KIRIM LINK INVITE ATAU USERNAME GRUP ANDA, JIKA ASSISTANT TIDAK DAPAT BERGABUNG DENGAN GRUP ANDA.**\n\n  Developed by : {OWNER}\n\n",
         )
         return
 
