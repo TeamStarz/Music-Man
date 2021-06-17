@@ -32,7 +32,7 @@ async def start_(client: Client, message: Message):
         f"""<b>Hallo {message.from_user.first_name} Aku adalah {PROJECT_NAME}\n
 __Aku Adalah Bot Music Group, Yang Dirancang Untuh Mengunduh Maupun Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.__
 ┈──────────────────────┈
-➠ Invite __[Assistance](Zeed1_Assistance)__ Masuk ke Dalam Grup Anda
+➠ Invite __[Assistance](Zeed1Assistance)__ Masuk ke Dalam Grup Anda
 ➠ Untuk Info, Update, dan Panduan Selengkapnya Tekan Tombol Channel di Bawah, Terima kasih! Have Fun!!
 ┈──────────────────────┈
 Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap Zeed Music.
